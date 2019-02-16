@@ -22,7 +22,7 @@ namespace MyScriptureJournal.Pages.ScripturesScaff
 
         public async Task OnGetAsync()
         {
-            Scriptures = await _context.Scriptures.ToListAsync();
+            Scriptures = await _context.Scripture.ToListAsync();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model MyScriptureJournal.Pages.ScripturesScaff.DetailsModel
 
 @{
@@ -34,6 +34,12 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Scriptures.Verse)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scriptures.Notes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scriptures.Notes)
         </dd>
     </dl>
 </div>

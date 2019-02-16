@@ -27,7 +27,7 @@ namespace MyScriptureJournal.Pages.ScripturesScaff
                 return NotFound();
             }
 
-            Scriptures = await _context.Scriptures.FirstOrDefaultAsync(m => m.ID == id);
+            Scriptures = await _context.Scripture.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Scriptures == null)
             {

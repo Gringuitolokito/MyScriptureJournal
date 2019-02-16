@@ -33,7 +33,7 @@ namespace MyScriptureJournal.Pages.ScripturesScaff
                 return Page();
             }
 
-            _context.Scriptures.Add(Scriptures);
+            _context.Scripture.Add(Scriptures);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -28,7 +28,7 @@ namespace MyScriptureJournal.Pages.ScripturesScaff
                 return NotFound();
             }
 
-            Scriptures = await _context.Scriptures.FirstOrDefaultAsync(m => m.ID == id);
+            Scriptures = await _context.Scripture.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Scriptures == null)
             {
@@ -44,11 +44,11 @@ namespace MyScriptureJournal.Pages.ScripturesScaff
                 return NotFound();
             }
 
-            Scriptures = await _context.Scriptures.FindAsync(id);
+            Scriptures = await _context.Scripture.FindAsync(id);
 
             if (Scriptures != null)
             {
-                _context.Scriptures.Remove(Scriptures);
+                _context.Scripture.Remove(Scriptures);
                 await _context.SaveChangesAsync();
             }
 

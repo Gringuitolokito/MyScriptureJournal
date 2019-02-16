@@ -14,8 +14,12 @@ namespace MyScriptureJournal.Models
         //The DataType attribute specifies the type of the data (Date). With this attribute:
         //  The user is not required to enter time information in the date field.
         //  Only the date is displayed, not time information.
+
         [DataType(DataType.Date)]
-        public DateTime Date { get; set; }        
+        public DateTime Date { get; set; }
+        //Validation
+        [StringLength(15, MinimumLength = 3)]
+        [Required]
         public string Book { get; set; }
         
         public double Chapter { get; set; }
